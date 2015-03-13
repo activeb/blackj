@@ -16,6 +16,7 @@
     <preference name="prerendered-icon" value="true" />
     <preference name="stay-in-webview" value="false" />
     <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="DisallowOverscroll" value="true" />
   
   <!--gap:plugin name="com.admob.google" source="plugins.cordova.io" /-->
   <gap:plugin name="org.apache.cordova.dialogs" version="0.2.10" />
