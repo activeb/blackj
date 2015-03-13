@@ -507,7 +507,7 @@ form{
 }
 .btn-wrappers{
 	float: left;
-	margin-right: 1%;
+	margin: 0.7em 0 0 0;
 }
 
 /* Media Queries */
