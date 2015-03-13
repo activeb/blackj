@@ -1,7 +1,37 @@
+var isMobile = {
+	    Android: function() {
+	        return navigator.userAgent.match(/Android/i);
+	    },
+	    BlackBerry: function() {
+	        return navigator.userAgent.match(/BlackBerry/i);
+	    },
+	    iOS: function() {
+	        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+	    },
+	    Opera: function() {
+	        return navigator.userAgent.match(/Opera Mini/i);
+	    },
+	    Windows: function() {
+	        return navigator.userAgent.match(/IEMobile/i);
+	    },
+	    any: function() {
+	        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+	    }
+	};	
+
 //-----------------------------------------------------------------------------
 // Card constructor function.
 //-----------------------------------------------------------------------------
-var testt = 'baubau';
+function infos(){
+        alert('infos');
+    }
+    function newgame(){
+        alert ('new');
+    }
+
+
+var betu ;
+var hack = 0;
 function Card(rank, suit) {
 
   this.rank = rank;
@@ -15,12 +45,13 @@ function alertDismissed() {
     // do something
 }
  function showAlert(message) {
+   if(isMobile.any()){
     navigator.notification.alert(
         '',  // message
          alertDismissed,         // callback
         message ,            // title
         'D\'accord'                  // buttonName
-    );
+    ); } else {console.log(message)}
 }
 function onConfirm(buttonIndex) {
         //alert('You selected button ' + buttonIndex);
@@ -31,12 +62,16 @@ function onConfirm(buttonIndex) {
     // Show a custom confirmation dialog
     //
     function showConfirm() {
+      if(isMobile.any()){
         navigator.notification.confirm(
             '', // message
              onConfirm,            // callback to invoke with index of button pressed
             'Do you want to buy insurance?',           // title
             ['Oui','Non']         // buttonLabels
-        );
+        ); } else {
+         confirm('Do you want to buy insurance?');
+        }
+        
     }
 
 
@@ -47,10 +82,10 @@ function onConfirm(buttonIndex) {
 
 // Preload graphics.
 
-var cardImg0 = new Image(); cardImg0.src= "assets/images/cardback.gif";
-var cardImg1 = new Image(); cardImg1.src= "assets/images/jack.gif";
-var cardImg2 = new Image(); cardImg2.src= "assets/images/queen.gif";
-var cardImg3 = new Image(); cardImg3.src= "assets/images/king.gif";
+var cardImg0 = new Image(); cardImg0.src= "images/cardback.gif";
+var cardImg1 = new Image(); cardImg1.src= "images/jack.gif";
+var cardImg2 = new Image(); cardImg2.src= "images/queen.gif";
+var cardImg3 = new Image(); cardImg3.src= "images/king.gif";
 
 function cardCreateNode() {
 
@@ -95,7 +130,13 @@ function cardCreateNode() {
   spotNode = document.createElement("DIV");
   spotNode.className = "index";
   textNode = document.createTextNode(indexStr);
+  if (this.rank == "10") {
+  $(spotNode).css('background-color','unset').css('left','0'); 
+  }
+  //console.log(spotNode);
   spotNode.appendChild(textNode);
+  
+  
   spotNode.appendChild(document.createElement("BR"));
   textNode = document.createTextNode(spotChar);
   spotNode.appendChild(textNode);
@@ -180,11 +221,11 @@ function cardCreateNode() {
   tempNode = document.createElement("IMG");
   tempNode.className = "face";
   if (this.rank == "J")
-    tempNode.src = "assets/images/jack.gif";
+    tempNode.src = "images/jack.gif";
   if (this.rank == "Q")
-    tempNode.src = "assets/images/queen.gif";
+    tempNode.src = "images/queen.gif";
   if (this.rank == "K")
-    tempNode.src = "assets/images/king.gif";
+    tempNode.src = "images/king.gif";
 
   // For face cards, add suit characters to the upper-left and lower-right
   // corners.
@@ -319,7 +360,7 @@ var player = new Array(maxSplits + 1);
 var curPlayerHand, numPlayerHands;
 
 var credits, defaultBet;
-var creditsTextNode, defaultTextNode;
+var creditsTextNode, defaultTextNode,nod1;
 
 var dealRoundCounter;
 
@@ -373,7 +414,10 @@ function Hand(id) {
   this.cardsNode     = document.getElementById(id + "Cards");
   this.scoreTextNode = document.getElementById(id + "Score").firstChild;
   if (id != "dealer") {
+    //this.betStrongNode = 
     this.betTextNode    = document.getElementById(id + "Bet").firstChild;
+    //nod1 = document.getElementById(id + "Bet"); 
+    //this.betTextNode    = nod1.getElementsByTagName('div')[0];
     this.resultTextNode = document.getElementById(id + "Result").firstChild;
   }
 
@@ -391,7 +435,7 @@ function Hand(id) {
 function handReset() {
 
   // Remove any cards and initialize properties.
-
+   $('#dealerpoints span').css('display','none');
   this.clearCards();
 
   this.cards     = new Array();
@@ -566,7 +610,8 @@ function startRound() {
   // Start dealing the cards.
   dealRoundCounter = 1;
   dealRound();
-  $('#player0Bet.dollars').css("background-image","url('assets/images/coins.png'").css("background-position","0 50%;").css("background-size","30%").css("background-repeat","no-repeat");
+  //$('.bett').css("background-image","url('images/coins.png'").css("background-position","0 50%;").css("background-size","30%").css("background-repeat","no-repeat");
+  $('.bett').show();
   $('#player0points span').css("display","block");
 }
 
@@ -606,10 +651,13 @@ function dealRound()
 
   if (player[0].getScore() == 21) {
     player[0].blackjack = true;
+    $('#player0Score').css('font-size','1.5em');
     player[0].scoreTextNode.nodeValue = "Blackjack";
   }
-  else
+  else{
+   $('#player0Score').css('font-size','2.5em');
     player[0].scoreTextNode.nodeValue = player[0].getScore();
+  }
 
   // Set a timer for the next call.
 
@@ -628,7 +676,11 @@ function playRound() {
 
   if (dealer.getScore() == 21) {
     dealer.blackjack = true;
+    $('#dealerScore').css('font-size','1.5em');
     dealer.scoreTextNode.nodeValue = "Blackjack";
+  } else {
+   $('#dealerScore').css('font-size','2.5em');
+   $('#dealerpoints span').css('display','block');
   }
 
   // If player or dealer has blackjack, end the round.
@@ -885,9 +937,11 @@ function playDealer() {
     //alert("Busted (" + d + ")");
     //dealer.scoreTextNode.nodeValue = d;
     $('#dealerpoints span').css("display","none");
+    $('#dealerScore').css('font-size','1.5em');
+    
     dealer.scoreTextNode.nodeValue = "Busted (" + d + ")";
   } else {
-    
+    $('#dealerScore').css('font-size','2.5em');
   }
 
   // Dealer is done, unhighlight the hand and end the round.
@@ -1009,10 +1063,15 @@ function updateBetDisplay(n) {
 
   if (player[n]) {
     if (player[n].bet != null){
-            s = "Bet: " + formatDollar(player[n].bet);
+            //s = "Bet: " + formatDollar(player[n].bet);
+            s = formatDollar(player[n].bet);
     }else
       s = "\u00a0";
+    //betu = player[n].betTextNode.parentNode;
+    $('.player0Bettxt').show();
     player[n].betTextNode.nodeValue = s;
+    
+    //betu.innerHTML=betu.childNodes[0].nodeValue.replace(/Bet:/, "<strong>Bet:</strong>");
   //setTimeout(function(){
   //  $('#player0Bet.textBox.dollars').each(function(){
   //  var me = $(this)
@@ -1024,7 +1083,7 @@ function updateBetDisplay(n) {
 
   // Display current credits.
 
-  creditsTextNode.nodeValue = "Credits: " + formatDollar(credits);
+  creditsTextNode.nodeValue =formatDollar(credits);
 }
 
 function formatDollar(n) {
@@ -1046,7 +1105,7 @@ function changeBet(n) {
 
   defaultBet += n;
   defaultBet = Math.max(Math.min(defaultBet, maxBet), minBet);
-  defaultTextNode.nodeValue = "Default Bet: " + formatDollar(defaultBet);
+  defaultTextNode.nodeValue = formatDollar(defaultBet);
   //updateBetDisplay(0);
   // Reset the increase/decrease buttons.
 
