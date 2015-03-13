@@ -643,7 +643,10 @@ form{
 	}
 	#controlsArea input#infos.btn, 
 	#controlsArea input#newgame.btn{
-		background-position: 50% 70%;	
+		background-position: 50% center;	
+	}
+	#controlsArea input.button{
+		margin-top: -0.2em;
 	}
 }
 
