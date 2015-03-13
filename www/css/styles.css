@@ -511,7 +511,7 @@ form{
 }
 
 /* Media Queries */
-@media only screen and  (max-device-width : 1366px)  and (orientation : landscape) {
+@media only screen and  (max-device-width : 960px)  and (orientation : landscape) {
 	.content{
 		font-size: 1.7em;
 	}
@@ -558,7 +558,7 @@ form{
 		font-size: 1em;
 	}
 }
-@media only screen and  (max-device-width : 1280px)  and (orientation : landscape) {
+@media only screen and  (max-device-width : 800px)  and (orientation : landscape) {
 	.content{
 		font-size: 1.5em;
 	}
@@ -567,7 +567,7 @@ form{
     	padding: 0 0 3px 35px;
 	}
 }
-@media only screen and  (max-device-width : 1024px)  and (orientation : landscape) {
+@media only screen and  (max-device-width : 768px)  and (orientation : landscape) {
 	.content{
 		font-size: 1.3em;
 	}
@@ -598,7 +598,7 @@ form{
 		font-size: 2.5em;
 	}
 }
-@media only screen and  (max-device-width : 736px)  and (orientation : landscape) {
+@media only screen and  (max-device-width : 414px)  and (orientation : landscape) {
 	.content{
 		font-size: 1em;
 	}
@@ -643,7 +643,7 @@ form{
 	}
 }
 
-@media only screen and (max-device-width : 667px) and (orientation : landscape) {
+@media only screen and (max-device-width : 375px) and (orientation : landscape) {
 	.player-det, .dealer-det{
 		height: 77%;
 	}
@@ -654,7 +654,8 @@ form{
     	margin-top: 0.1em;
 	}
 }
-@media only screen and (max-device-width : 568px) and (orientation : landscape) { 
+@media only screen and (max-device-width : 320px) and (orientation : landscape) { 
+	
 	.name{
 		font-size: 0.9375em;
 	}
@@ -683,12 +684,8 @@ form{
 	}
 	
 }
-@media only screen and (max-device-width : 480px) and (orientation : landscape) { 
-	#controlsArea input.button{
-		font-size: 0.9em;
-	}
-}
-@media only screen and (max-device-width : 440px) and (orientation : landscape) { 
+
+@media only screen and (max-device-width : 300px) and (orientation : landscape) { 
 	.content{
 		font-size: 0.8em;
 	}
