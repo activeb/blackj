@@ -385,7 +385,7 @@ form{
 	color: #fff;
 }
 .credits-def div.cred, .credits-def div.defbet{
-    background-image: url('../images/coins.png');
+    background-image: url('../images/coins2.png');
     background-position: 0 50%;
     background-size: 10%;
     background-repeat: no-repeat;
@@ -648,6 +648,9 @@ form{
 	#controlsArea input.button{
 		margin-top: -0.2em;
 	}
+	.credits-def{
+		font-size: 1em;
+	}
 }
 
 @media only screen and (max-device-width : 375px) and (orientation : landscape) {
@@ -683,7 +686,12 @@ form{
     	font-size: 1.2em;
 	}
 	#controlsArea input.button{
-		padding: 0.2em 0.5em;
+		float: left;
+		margin-right: 0.5em;
+		padding: 0.2em 0.7em;
+	}
+	#controlsArea input.button:last-child{
+		margin-right: 0;
 	}
 	#controlsArea input#infos.btn, #controlsArea input#newgame.btn {
       background-size: 25px auto;
