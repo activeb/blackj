@@ -131,7 +131,7 @@ function cardCreateNode() {
   spotNode.className = "index";
   textNode = document.createTextNode(indexStr);
   if (this.rank == "10") {
-  $(spotNode).css('background-color','unset').css('left','0'); 
+  $(spotNode).css('background-color','none').css('left','0'); 
   }
   //console.log(spotNode);
   spotNode.appendChild(textNode);
