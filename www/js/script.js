@@ -56,6 +56,7 @@ function alertDismissed() {
 function onConfirm(buttonIndex) {
         //alert('You selected button ' + buttonIndex);
         return buttonIndex;
+      alert(buttonIndex);
       console.log(buttonIndex);
     }
 
@@ -69,7 +70,8 @@ function onConfirm(buttonIndex) {
             'Do you want to buy insurance?',           // title
             ['Oui','Non']         // buttonLabels
         ); } else {
-         confirm('Do you want to buy insurance?');
+         var aa = confirm('Do you want to buy insurance?');
+         console.log(aa);
         }
         
     }
@@ -131,7 +133,7 @@ function cardCreateNode() {
   spotNode.className = "index";
   textNode = document.createTextNode(indexStr);
   if (this.rank == "10") {
-  $(spotNode).css('background-color','transparent').css('left','0'); 
+  $(spotNode).css('background-color','unset').css('left','0'); 
   }
   //console.log(spotNode);
   spotNode.appendChild(textNode);
@@ -335,7 +337,7 @@ function stackCardCount() {
 // ============================================================================
 // Blackjack game.
 // ============================================================================
-
+var initCredit;
 // Constants.
 
 var numPacks      =    4;
@@ -345,7 +347,13 @@ var maxSplits     =    0;
 
 var minBet        =    5;
 var maxBet        =  100;
-var initCredit    = 1000;
+if (window.localStorage.getItem('scor') !== null) {
+   var a = window.localStorage.getItem('scor');
+   console.log(a);
+   initCredit = parseInt(a);
+} else {
+   initCredit = 1000;
+}
 var initBet       =   10;
 
 var dealTimeDelay =  750;
@@ -605,6 +613,8 @@ function startRound() {
 
   player[0].bet = defaultBet;
   credits -= player[0].bet;
+  window.localStorage.setItem('scor',credits);
+  console.log(window.localStorage.getItem('scor'));
   updateBetDisplay(0);
 
   // Start dealing the cards.

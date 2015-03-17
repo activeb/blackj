@@ -115,8 +115,9 @@
         </form>
        
         <!-- Rules text. -->
-        
-        <!--<div id="rulesBox">
+        <div class = "clear"></div>
+        <div id="rulesBox1" style="left:0;">
+            <span class="button b-close"><span>X</span></span>
         
           <h3>Blackjack Rules</h3>
         
@@ -261,13 +262,14 @@
             <li>Aces may not be resplit.</li>
           </ul>
         
-        </div>-->
+        </div>
     </div>
 
 
 <script src="cordova.js"></script>
 <script src="js/fastclick.js"></script>
 <script src="js/jquery.js"></script>
+<script type="text/javascript" src = "js/jquery.popup.min.js"></script>
 <script type="text/javascript" src = "js/script.js"></script>
 <script>
     var admobid = {};
@@ -314,10 +316,12 @@
         
     });
     $(document).on('click','#infos',function(){
-        alert('infos');        
+        $('#rulesBox1').bPopup();
+        //alert('infos');        
     });
     $(document).on('click','#newgame',function(){
-        alert('newgame');        
+        window.localStorage.removeItem('scor');
+        location.reload();
     });
     
 </script>
