@@ -322,6 +322,18 @@
     $(document).on('click','#newgame',function(){
         showConfirmNew();
     });
+    $(window).load(function(){
+        var clasa;
+        if(isMobile.Android()) {
+            clasa = 'Android';
+        } else if (isMobile.iOS()) {
+            clasa = 'iOS';
+        } else { clasa = 'other';}
+       setTimeout(function(){
+            $('body').addClass(clasa); 
+       },200);
+        
+    });
     
 </script>
 </body>
