@@ -733,7 +733,7 @@ function offerInsurance() {
 
   // Offer insurance bet to player. This is a side bet so it's resolved here.
 
-  if (showConfirmIns() == '1') {
+  if (showConfirmIns() === 1) {
 
     // Take half of player's current bet from credits.
 
