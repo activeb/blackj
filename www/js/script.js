@@ -396,7 +396,7 @@ if (window.localStorage.getItem('scor') !== null) {
    console.log(a);
    initCredit = parseInt(a);
 } else {
-   initCredit = 1000;
+   initCredit = 100;//aici
 }
 var initBet       =   10;
 
@@ -624,50 +624,66 @@ function getNextCard() {
 function startRound() {
 
   var i;
-
-  // Reset all hands.
-
-  dealer.reset();
-  for (i = 0; i < player.length; i++) {
-    player[i].reset();
-    if (i > 0)
-      player[i].fieldNode.style.display = "none";
-  }
-
-  // Start with a single player hand.
-
-  curPlayerHand  = 0;
-  numPlayerHands = 1;
-
-  // Enable/disable buttons.
-
-  document.forms["controls"].elements["deal"].disabled      = true;
-  document.forms["controls"].elements["increase"].disabled  = true;
-  document.forms["controls"].elements["decrease"].disabled  = true;
-  DisablePlayButtons();
-
-  // If the burn card was reached, start a new deck.
-
-  if (deck.cardCount() < burnCard) {
-    showAlert("New Deck");
-    newDeck();
-  }
-
-  // Take the player's bet.
-
-  player[0].bet = defaultBet;
-  credits -= player[0].bet;
-  window.localStorage.setItem('scor',credits);
-  console.log(window.localStorage.getItem('scor'));
-  updateBetDisplay(0);
-
-  // Start dealing the cards.
-  dealRoundCounter = 1;
-  dealRound();
-  //$('.bett').css("background-image","url('images/coins.png'").css("background-position","0 50%;").css("background-size","30%").css("background-repeat","no-repeat");
-  $('.bett').show();
-  $('#player0points span').css("display","block");
-}
+   if ((credits < defaultBet) && (credits > minBet)) {
+      showAlert("Default bet will be reseted to minimum bet, because you have less credits than actual bet");
+      setTimeout(function(){changeBet(0);},100);
+   }
+   if (credits < minBet) {
+      
+      showConfirmNew();
+   } else {
+      // Reset all hands.
+    
+      dealer.reset();
+      for (i = 0; i < player.length; i++) {
+        player[i].reset();
+        if (i > 0)
+          player[i].fieldNode.style.display = "none";
+      }
+    
+      // Start with a single player hand.
+    
+      curPlayerHand  = 0;
+      numPlayerHands = 1;
+    
+      // Enable/disable buttons.
+    
+      document.forms["controls"].elements["deal"].disabled      = true;
+      document.forms["controls"].elements["increase"].disabled  = true;
+      document.forms["controls"].elements["decrease"].disabled  = true;
+      // setTimeout(function(){
+      //    var jj = credits - defaultBet;
+      //    console.log(jj);
+      // if( jj <= 0) {
+      //    console.log('bau');
+      //     document.forms["controls"].elements["double"].disabled  = true; 
+      // }
+      //},100);
+      DisablePlayButtons();
+        
+      // If the burn card was reached, start a new deck.
+    
+      if (deck.cardCount() < burnCard) {
+        showAlert("New Deck");
+        newDeck();
+      }
+    
+      // Take the player's bet.
+    
+      player[0].bet = defaultBet;
+      credits -= player[0].bet;
+      window.localStorage.setItem('scor',credits);
+      console.log(window.localStorage.getItem('scor'));
+      updateBetDisplay(0);
+    
+      // Start dealing the cards.
+      dealRoundCounter = 1;
+      dealRound();
+      //$('.bett').css("background-image","url('images/coins.png'").css("background-position","0 50%;").css("background-size","30%").css("background-repeat","no-repeat");
+      $('.bett').show();
+      $('#player0points span').css("display","block");
+   } //end credits > minBet
+} //end startRound
 
 function dealRound()
 {
@@ -745,6 +761,15 @@ function playRound() {
   }
 
   // Enable/disable buttons.
+  setTimeout(function(){
+      var jj = credits - defaultBet;
+      console.log(jj);
+   if( jj < 0) {
+      console.log('bau');
+       document.forms["controls"].elements["double"].disabled  = true;
+       //$(document.forms["controls"].elements["double"]).css();
+   }
+  },100);
 
   if (canSplit())
     document.forms["controls"].elements["split"].disabled = false;
@@ -997,7 +1022,7 @@ function endRound() {
   var i, d, p, tmp;
 
   // Enable/disable buttons.
-
+   
   document.forms["controls"].elements["deal"].disabled = false;
   EnableBetButtons();
   DisablePlayButtons();
@@ -1118,6 +1143,8 @@ function updateBetDisplay(n) {
   // Display current credits.
 
   creditsTextNode.nodeValue =formatDollar(credits);
+
+  
 }
 
 function formatDollar(n) {
@@ -1136,9 +1163,13 @@ function formatDollar(n) {
 function changeBet(n) {
 
   // Increase or decrease the default bet.
-
+   
   defaultBet += n;
-  defaultBet = Math.max(Math.min(defaultBet, maxBet), minBet);
+  if (credits < maxBet) {
+      defaultBet = Math.max(Math.min(defaultBet, credits), minBet);
+  } else {
+      defaultBet = Math.max(Math.min(defaultBet, maxBet), minBet);
+  }   
   defaultTextNode.nodeValue = formatDollar(defaultBet);
   //updateBetDisplay(0);
   // Reset the increase/decrease buttons.
@@ -1150,9 +1181,14 @@ function EnableBetButtons() {
 
   // Enable the increase and decrease bet buttons provided the current bet
   // amount is within the allowed min/max value.
-
-  document.forms["controls"].elements["increase"].disabled = (defaultBet >= maxBet);
+   setTimeout(function(){
+   if (credits < maxBet) {
+      document.forms["controls"].elements["increase"].disabled = (defaultBet >= credits);
+   } else {
+      document.forms["controls"].elements["increase"].disabled = (defaultBet >= maxBet);
+   }
   document.forms["controls"].elements["decrease"].disabled = (defaultBet <= minBet);
+  },100);
 }
 
 function DisablePlayButtons() {
