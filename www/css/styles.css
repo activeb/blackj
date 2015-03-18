@@ -883,19 +883,32 @@ form{
 		height: 80%;
 	}
 	.card {
-    	font-size: 1.3em;
+    	font-size: 1.2em;
 	}
 	.front div.index{
 		font-size: 0.2em;
 		left: 0.25em;
 	}
 	.front div{
-		font-size: 1.5em;
+		background-color: #fff;
+		font-size: 1em;
 	}
 	.front div.ace {
 		font-size: 200%;
-		left: 0.55em;
+		left: 0.6em;
 		top: 0.8em;
+	}
+	
+	.face ~ div.spotA1 {
+		font-size: 0.7em;
+		left: 0.8em;
+		top: 0.5em;
+	}
+	.face ~ div.spotC5 {
+		font-size: 0.7em;
+		left: auto;
+		right: 0.35em;
+		top: 3.9em;
 	}
 	.spotA1 { position: absolute; left: 0.60em; top: 0.5em; }
 	.spotA2 { position: absolute; left: 0.60em; top: 1.5em; }
