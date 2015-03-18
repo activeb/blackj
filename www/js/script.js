@@ -736,7 +736,7 @@ function offerInsurance() {
   if (showConfirmIns() === 1) {
 
     // Take half of player's current bet from credits.
-
+            alert('da');
     amount = player[0].bet / 2;
     credits -= amount;
 
@@ -754,6 +754,8 @@ function offerInsurance() {
     // Update credits.
 
     updateBetDisplay(0);
+  } else {
+            alert('nu');
   }
 }
 
