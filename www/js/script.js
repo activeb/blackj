@@ -734,7 +734,7 @@ function playRound() {
     dealer.scoreTextNode.nodeValue = "Blackjack";
   } else {
    $('#dealerScore').css('font-size','2.5em');
-   $('#dealerpoints span').css('display','block');
+   //$('#dealerpoints span').css('display','block');
   }
 
   // If player or dealer has blackjack, end the round.
