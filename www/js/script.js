@@ -110,7 +110,7 @@ function onConfirmIns(buttonIndex) {
       if(isMobile.any()){
         navigator.notification.confirm(
             '', // message
-             onConfirm,            // callback to invoke with index of button pressed
+             onConfirmNew,            // callback to invoke with index of button pressed
             'Do you realy want to start a new game?',           // title
             ['Oui','Non']         // buttonLabels
         ); } else {
