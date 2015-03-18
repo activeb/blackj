@@ -795,8 +795,15 @@ form{
 		top: 0.75em;
 	}
 }
+@media only screen and  (max-device-width : 568px){
+	.player-det, .dealer-det {
+		height: 80%;
+	}
+}
 @media only screen and (max-device-width : 480px){ 
-	
+	.content{
+		font-size: 0.85em;
+	}
 	.name{
 		font-size: 0.9375em;
 	}
@@ -811,24 +818,69 @@ form{
     	font-size: 0.75em;
 	}
 	.player-cont, .dealer-cont{
+		height: 92%;
 		font-size: 0.9em;
 	}
+	.player-det, .dealer-det{
+		height: 78%;
+		font-size: 1.1em
+	}
 	.card {
-    	font-size: 1.2em;
+    	font-size: 1em;
 	}
 	#controlsArea input.button{
 		float: left;
-		margin-right: 0.5em;
-		padding: 0.2em 0.7em;
+		margin-right: 0.2em;
+		padding: 0.5em 0.7em;
 	}
 	#controlsArea input.button:last-child{
 		margin-right: 0;
 	}
 	#controlsArea input#infos.btn, #controlsArea input#newgame.btn {
-      background-size: 25px auto;
-   	  width: 30px;
+      background-size: 20px auto;
+   	  width: 20px;
 	}
+	.front div{
+		background-color: transparent;
+		font-size: 0.8em;
+	}
+	.front div.index{
+		font-size: 0.2em;
+		left: 0.15em;
+	}
+	.face ~ div.spotA1 {
+		font-size: 0.7em;
+		left: 0.8em;
+		top: 0.7em;
+	}
+	.face ~ div.spotC5 {
+		font-size: 0.7em;
+		left: auto;
+		right: 0.35em;
+		top: 5.8em;
+	}
+	.front div.ace {
+		font-size: 170%;
+		left: 0.45em;
+		top: 1.2em;
+	}
+	.spotA1 { top: 1.5em; }
+	.spotA2 { top: 2.5em; }
+	.spotA3 { top: 3em; }
+	.spotA4 { top: 3.5em; }
+	.spotA5 { top: 4.5em; }
 	
+	.spotB1 { top: 1.5em; }
+	.spotB2 { top: 2em; }
+	.spotB3 { top: 3em; }
+	.spotB4 { top: 4em; }
+	.spotB5 { top: 4.5em; }
+	
+	.spotC1 { top: 1.5em; }
+	.spotC2 { top: 2.5em; }
+	.spotC3 { top: 3em; }
+	.spotC4 { top: 3.5em; }
+	.spotC5 { top: 4.5em; }
 }
 
 @media only screen and (max-device-width : 400px){ 
@@ -924,6 +976,28 @@ form{
 	.credits-def div.defbet {
 		background-image: url("../images/default-bet@2x.png");
 		background-size: 20px auto;
+	}	
+}
+@media (-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) and (max-device-width : 480px) { 
+	#decrease{
+		background-image: url("../images/bet-down@2x.png");
+		background-size: 20px auto;
 	}
-	
+	#increase{
+		background-image: url("../images/bet-up@2x.png");
+		background-size: 20px auto;
+	}
+	.credits-def div.cred {
+		background-image: url("../images/coins2@2x.png");
+		background-size: 20px auto;
+	}
+	.credits-def div.defbet {
+		background-image: url("../images/default-bet@2x.png");
+		background-size: 20px auto;
+	}	
+	.player-det .bett{
+		background-image: url("../images/coins@2x.png");
+		background-size: 15px auto;
+	}
 }
