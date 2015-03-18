@@ -99,7 +99,7 @@ function onConfirmIns(buttonIndex) {
             '', // message
              onConfirmIns,            // callback to invoke with index of button pressed
             'Do you want to buy insurance?',           // title
-            ['Oui','Non']         // buttonLabels
+            ['Yes','No']         // buttonLabels
         ); } else {
          var aa = confirm('Do you want to buy insurance?');
          console.log(aa);
@@ -112,7 +112,7 @@ function onConfirmIns(buttonIndex) {
             '', // message
              onConfirmNew,            // callback to invoke with index of button pressed
             'Do you realy want to start a new game?',           // title
-            ['Oui','Non']         // buttonLabels
+            ['Yes','No']         // buttonLabels
         ); } else {
          var aa = confirm('Do you realy want to start a new game?');
          console.log(aa);
