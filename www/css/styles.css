@@ -795,7 +795,7 @@ form{
 		top: 0.75em;
 	}
 }
-@media only screen and  (max-device-width : 568px){
+@media only screen and  (max-device-width: 570px){
 	.player-det, .dealer-det {
 		height: 80%;
 	}
@@ -807,8 +807,30 @@ form{
 		left: 0.25em;
 	}
 	.front div{
-		font-size: 1.2em;
+		font-size: 1.5em;
 	}
+	.front div.ace {
+		font-size: 200%;
+		left: 0.55em;
+		top: 0.8em;
+	}
+	.spotA1 { position: absolute; left: 0.60em; top: 0.5em; }
+	.spotA2 { position: absolute; left: 0.60em; top: 1.5em; }
+	.spotA3 { position: absolute; left: 0.60em; top: 2.0em; }
+	.spotA4 { position: absolute; left: 0.60em; top: 2.5em; }
+	.spotA5 { position: absolute; left: 0.60em; top: 3.5em; }
+	
+	.spotB1 { position: absolute; left: 1.55em; top: 0.5em; }
+	.spotB2 { position: absolute; left: 1.55em; top: 1.0em; }
+	.spotB3 { position: absolute; left: 1.55em; top: 2.0em; }
+	.spotB4 { position: absolute; left: 1.55em; top: 3.0em; }
+	.spotB5 { position: absolute; left: 1.55em; top: 3.5em; }
+	
+	.spotC1 { position: absolute; left: 2.50em; top: 0.5em; }
+	.spotC2 { position: absolute; left: 2.50em; top: 1.5em; }
+	.spotC3 { position: absolute; left: 2.50em; top: 2.0em; }
+	.spotC4 { position: absolute; left: 2.50em; top: 2.5em; }
+	.spotC5 { position: absolute; left: 2.50em; top: 3.5em; }
 }
 @media only screen and (max-device-width : 480px){ 
 	.content{
