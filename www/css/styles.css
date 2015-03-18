@@ -516,7 +516,22 @@ form{
 	float: left;
 	margin: 0.5em 0 0 0;
 }
-
+#rulesBox1{
+	background-color: rgba(24,51,73,0.8);
+	color: #fff;
+    display:none;
+    height:90%;
+    overflow-y:scroll;
+    padding: 15px 15px 15px;
+    left: 50%;
+    width: 250px;
+}
+#rulesBox1 .b-close{
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	top: 10px
+}
 /* Media Queries */
 @media only screen and  (max-device-width : 1366px)  {
 	.content{
@@ -563,6 +578,10 @@ form{
 	}
 	#player0points, #dealerpoints{
 		font-size: 1em;
+	}
+	#rulesBox1{
+		height: 94%;
+		width: 600px;
 	}
 }
 @media only screen and  (max-device-width : 1280px)  {
@@ -616,6 +635,10 @@ form{
 		left: 0.45em;
 		top: 1.1em;
 	}
+	#rulesBox1{
+		height: 94%;
+		width: 600px;
+	}
 }
 @media only screen and  (max-device-width : 1024px)  {
 	.content{
@@ -665,6 +688,10 @@ form{
 	}
 	.ace{
 		left: 0.45em;
+	}
+	#rulesBox1{
+		height: 94%;
+		width: 600px;
 	}
 }
 
@@ -733,14 +760,13 @@ form{
 		right: 0.3em;
 	    top: 4.9em;
 	}
+	#rulesBox1{
+		height: 90%;
+		width: 480px;
+	}
 	
 }
-#rulesBox1{
-    display:none;
-    height:98%;
-    overflow-y:scroll;
-    left: 0;
-}
+
 @media only screen and (max-device-width : 667px){
 	.player-det, .dealer-det{
 		height: 77%;
@@ -793,6 +819,10 @@ form{
 		font-size: 200%;
 		left: 0.57em;
 		top: 0.75em;
+	}
+	#rulesBox1{
+		height: 90%;
+		width: 480px;
 	}
 }
 @media only screen and  (max-device-width : 568px){
@@ -847,6 +877,10 @@ form{
 
 	.iOS .btn-wrappers{
 		margin: 0.3em 0 0.6em 0.2em;
+	}
+	#rulesBox1{
+		height: 90%;
+		width: 400px;
 	}
 }
 @media only screen and (max-device-width : 480px){ 
@@ -930,6 +964,11 @@ form{
 	.spotC3 { top: 3em; }
 	.spotC4 { top: 3.5em; }
 	.spotC5 { top: 4.5em; }
+	
+	#rulesBox1{
+		height: 90%;
+		width: 380px;
+	}
 }
 
 @media only screen and (max-device-width : 400px){ 
