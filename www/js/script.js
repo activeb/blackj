@@ -30,7 +30,7 @@ function infos(){
     }
 
 
-var betu ;
+var betu,buttonIndex ;
 var hack = 0;
 function Card(rank, suit) {
 
@@ -54,8 +54,8 @@ function alertDismissed() {
     ); } else {console.log(message)}
 }
 function onConfirm(buttonIndex) {
-        //alert('You selected button ' + buttonIndex);
-        return buttonIndex;
+        alert('You selected button ' + buttonIndex);
+        //return buttonIndex;
       alert(buttonIndex);
       console.log(buttonIndex);
     }
