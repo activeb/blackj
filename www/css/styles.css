@@ -800,11 +800,14 @@ form{
 		height: 80%;
 	}
 	.card {
-    	font-size: 1.5em !important;
+    	font-size: 1.3em;
 	}
 	.front div.index{
 		font-size: 0.2em;
 		left: 0.25em;
+	}
+	.front div{
+		font-size: 1.2em;
 	}
 }
 @media only screen and (max-device-width : 480px){ 
