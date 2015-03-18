@@ -795,10 +795,7 @@ form{
 		top: 0.75em;
 	}
 }
-@media only screen and  (min-device-width : 320px) and (max-device-width : 568px) {
-	.content-top{
-		background: #000;
-	}
+@media only screen and  (min-device-height : 320px){
 	.player-det, .dealer-det {
 		height: 80%;
 	}
