@@ -193,7 +193,11 @@ body {
   width: 2.890625em;
   height: 4.65em;
 }
+.front div{
+	color: #000;
+	font-family: 'Times New Roman', serif;
 
+}
 .spotA1 { position: absolute; left: 0.60em; top: 0.5em; }
 .spotA2 { position: absolute; left: 0.60em; top: 1.5em; }
 .spotA3 { position: absolute; left: 0.60em; top: 2.0em; }
@@ -306,7 +310,7 @@ body {
     margin-bottom: 14px;*/
     margin-bottom: 0px;
     font-size: 2.125em;
-    color: #4fa02e;
+    color: #c72b2b;
     /*background: -webkit-linear-gradient(#77bb55,#4fa02e);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;*/
@@ -387,7 +391,7 @@ form{
 .credits-def div.cred, .credits-def div.defbet{
     background-image: url('../images/coins2.png');
     background-position: 0 50%;
-    background-size: 10%;
+    background-size: 13px 10px;
     background-repeat: no-repeat;
 }
 .credits-def div.defbet{
@@ -404,7 +408,7 @@ form{
 .content-top{
     /*min-height: 210px;*/
    /* height: 84.5%;*/
-    background: url('../images/pattern-blue.jpg') repeat;
+    background: url('../images/pattern2.png') repeat;
     height: 89%;
     padding: 0.5em;
     
@@ -438,38 +442,43 @@ form{
 	text-shadow: 0 2px 0 rgba(0,0,0,0.2);
 }
 #controlsArea input.button#deal {
-	background: rgb(129,195,39); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(129,195,39,1) 0%, rgba(75,161,50,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(129,195,39,1)), color-stop(100%,rgba(75,161,50,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(129,195,39,1) 0%,rgba(75,161,50,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(129,195,39,1) 0%,rgba(75,161,50,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(129,195,39,1) 0%,rgba(75,161,50,1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(129,195,39,1) 0%,rgba(75,161,50,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#81c327', endColorstr='#4ba132',GradientType=0 ); /* IE6-9 */
-}
-#controlsArea input.button[disabled=disabled]{
-	background: rgb(33,102,150); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(33,102,150,1) 0%, rgba(61,149,210,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(33,102,150,1)), color-stop(100%,rgba(61,149,210,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(33,102,150,1) 0%,rgba(61,149,210,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(33,102,150,1) 0%,rgba(61,149,210,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(33,102,150,1) 0%,rgba(61,149,210,1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(33,102,150,1) 0%,rgba(61,149,210,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#216696', endColorstr='#3d95d2',GradientType=0 ); /* IE6-9 */
+	background: rgb(219,89,89); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(219,89,89,1) 0%, rgba(177,25,25,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(219,89,89,1)), color-stop(100%,rgba(177,25,25,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(219,89,89,1) 0%,rgba(177,25,25,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(219,89,89,1) 0%,rgba(177,25,25,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(219,89,89,1) 0%,rgba(177,25,25,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(219,89,89,1) 0%,rgba(177,25,25,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db5959', endColorstr='#b11919',GradientType=0 ); /* IE6-9 */
 
+}
+#controlsArea input.button[disabled=disabled], #controlsArea input.button[disabled]{
+	background: rgba(33,102,150, 0.5); /* Old browsers */
+	
+	background: -moz-linear-gradient(top,  rgba(33,102,150,1) 0%, rgba(61,149,210,1) 100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(33,102,150,1)), color-stop(100%,rgba(61,149,210,1))); 
+	background: -webkit-linear-gradient(top,  rgba(33,102,150,1) 0%,rgba(61,149,210,1) 100%); 
+	background: -o-linear-gradient(top,  rgba(33,102,150,1) 0%,rgba(61,149,210,1) 100%); 
+	background: -ms-linear-gradient(top,  rgba(33,102,150,1) 0%,rgba(61,149,210,1) 100%); 
+	background: linear-gradient(to bottom,  rgba(33,102,150,1) 0%,rgba(61,149,210,1) 100%); 
 	opacity: 0.8;
+	-webkit-opacity: 0.8; 
 	box-shadow: none;
 }
-#controlsArea input.button#deal[disabled=disabled]{
-	background: rgb(75,161,50); /* Old browsers */
-	background: -moz-linear-gradient(top,  rgba(75,161,50,1) 0%, rgba(129,195,39,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(75,161,50,1)), color-stop(100%,rgba(129,195,39,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(75,161,50,1) 0%,rgba(129,195,39,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(75,161,50,1) 0%,rgba(129,195,39,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(75,161,50,1) 0%,rgba(129,195,39,1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(75,161,50,1) 0%,rgba(129,195,39,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4ba132', endColorstr='#81c327',GradientType=0 ); /* IE6-9 */
+#controlsArea input.button#deal[disabled=disabled], #controlsArea input.button#deal[disabled]{
+	background: rgb(177,25,25); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(177,25,25,1) 0%, rgba(219,89,89,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(177,25,25,1)), color-stop(100%,rgba(219,89,89,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(177,25,25,1) 0%,rgba(219,89,89,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(177,25,25,1) 0%,rgba(219,89,89,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(177,25,25,1) 0%,rgba(219,89,89,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(177,25,25,1) 0%,rgba(219,89,89,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b11919', endColorstr='#db5959',GradientType=0 ); /* IE6-9 */
 
+	
+	opacity: 0.8;
+	-webkit-opacity: 0.8;
+	box-shadow: none;
 }
 #inc-dec{
 	bottom: 11px;
@@ -491,27 +500,25 @@ form{
    float: right;
 }
 #controlsArea input.btn#infos, #controlsArea input.btn#newgame   {
-    background-color: unset;
+    background-color: transparent;
     background-image: url("../images/info.png");
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-size: 52% auto;
+    background-size: 30px auto;
     border: medium none;
-    padding: 0.2em 0;
-    width: 60px;
     box-shadow: none;
-
+	padding: 0.5em 1em;
 }
 #controlsArea input.btn#newgame {
     background-image: url("../images/new.png");
 }
 .btn-wrappers{
 	float: left;
-	margin: 0.7em 0 0 0;
+	margin: 0.5em 0 0 0;
 }
 
 /* Media Queries */
-@media only screen and  (max-device-width : 960px)  and (orientation : landscape) {
+@media only screen and  (max-device-width : 1366px)  {
 	.content{
 		font-size: 1.7em;
 	}
@@ -558,7 +565,26 @@ form{
 		font-size: 1em;
 	}
 }
-@media only screen and  (max-device-width : 800px)  and (orientation : landscape) {
+@media only screen and  (max-device-width : 1280px)  {
+	#controlsArea input.button{
+		float: left;
+	}
+	#controlsArea input.btn#infos, 
+	#controlsArea input.btn#newgame{
+		background-size: 45px auto;	
+		height: 45px;
+		padding: 0em 1em;
+	}
+	.front div{
+		color: #000;
+		-webkit-text-fill-color: #000;
+		font-family: 'Times New Roman', serif;
+		font-size: 0.95em;
+		line-height: 1.2;
+	}
+	.front div.index{
+		font-size: 0.5em;
+	}
 	.content{
 		font-size: 1.5em;
 	}
@@ -566,13 +592,37 @@ form{
     	background-size: 30px auto;
     	padding: 0 0 3px 35px;
 	}
+	.btn-wrappers{
+		margin: 0.6em 0 0.6em;
+	}
+	.credits-def{
+		margin-top: 0.5em; 	
+	}
+	/* face card */
+	.face ~ div.spotA1{
+		left: 0.9em;
+		top: 0.85em;
+		font-size: 0.65em;
+		z-index: 5;
+	}
+	.face ~ div.spotC5{
+		right: 0.5em;
+		top: 6.5em;
+		font-size: 0.65em;
+		left: 3.7em;
+	}
+	.front div.ace{
+		font-size: 170%;
+		left: 0.45em;
+		top: 1.1em;
+	}
 }
-@media only screen and  (max-device-width : 768px)  and (orientation : landscape) {
+@media only screen and  (max-device-width : 1024px)  {
 	.content{
 		font-size: 1.3em;
 	}
 	.card{
-		font-size: 1.7em;
+		font-size: 1.3em;
 	}
 	#inc-dec{
 		font-size: 1em;
@@ -597,8 +647,29 @@ form{
 	#player0Score, #dealerScore{
 		font-size: 2.5em;
 	}
+	.credits-def{
+		margin-top: 0.5em;
+		font-size: 0.9em;
+	}
+	/* face card */
+	.face ~ div.spotA1{
+		font-size: 0.8em;
+		left: 0.87em;
+	    top: 0.7em;
+	}
+	.face ~ div.spotC5{
+		font-size: 0.8em;
+		left: auto;
+		right: 0.35em;
+	    top: 5em;
+	}
+	.ace{
+		left: 0.45em;
+	}
 }
-@media only screen and  (max-device-width : 414px)  and (orientation : landscape) {
+
+
+@media only screen and  (max-device-width : 736px){
 	.content{
 		font-size: 1em;
 	}
@@ -612,7 +683,7 @@ form{
 		margin-top: 0.5em;
 	}
 	.card{
-		font-size: 1.5em;
+		font-size: 1.2em;
 	}
 	#increase, #decrease{
 		background-size: 25px auto;
@@ -634,6 +705,7 @@ form{
 	#controlsArea input#infos.btn, 
 	#controlsArea input#newgame.btn{
 		background-size: 40% auto;
+		margin-top: -5px;
 		width: 50px;	
 	}
 	.credits-def div.cred, 
@@ -651,9 +723,25 @@ form{
 	.credits-def{
 		font-size: 1em;
 	}
+	.face ~ div.spotA1{
+		font-size: 0.8em;
+		left: 0.9em;
+	    top: 0.7em;
+	}
+	.face ~ div.spotC5{
+		font-size: 0.8em;
+		right: 0.3em;
+	    top: 4.9em;
+	}
+	
 }
-
-@media only screen and (max-device-width : 375px) and (orientation : landscape) {
+#rulesBox1{
+    display:none;
+    height:98%;
+    overflow-y:scroll;
+    left: 0;
+}
+@media only screen and (max-device-width : 667px){
 	.player-det, .dealer-det{
 		height: 77%;
 	}
@@ -664,7 +752,50 @@ form{
     	margin-top: 0.1em;
 	}
 }
-@media only screen and (max-device-width : 320px) and (orientation : landscape) { 
+@media only screen and (max-device-width : 640px){
+	
+	.player-det, .dealer-det {
+		height: 73%;
+		font-size: 0.8em;
+	}
+	.btn-wrappers {
+		margin: 0.2em 0 0.6em;
+	}
+	#controlsArea input#infos.btn, #controlsArea input#newgame.btn{
+		margin-top: -0.25em;
+	}
+	#increase, #decrease {
+		background-size: 20px auto;
+	}
+	#controlsArea input.button{
+		margin-top: 0.2em;
+	}
+	.credits-def{
+		margin-top: 0;
+	}
+	.credits-def{
+		font-size: 1em;
+	}
+	.front div{
+		font-size: 1.05em;
+	}
+	.face ~ div.spotA1 {
+		font-size: 0.9em;
+		left: 0.7em;
+		top: 0.5em;
+	}
+	.face ~ div.spotC5 {
+		font-size: 0.9em;
+		right: 0.5em;
+		top: 4.2em;
+	}
+	.front div.ace {
+		font-size: 200%;
+		left: 0.57em;
+		top: 0.75em;
+	}
+}
+@media only screen and (max-device-width : 480px){ 
 	
 	.name{
 		font-size: 0.9375em;
@@ -700,7 +831,7 @@ form{
 	
 }
 
-@media only screen and (max-device-width : 300px) and (orientation : landscape) { 
+@media only screen and (max-device-width : 400px){ 
 	.content{
 		font-size: 0.8em;
 	}
@@ -708,4 +839,91 @@ form{
       background-size: 15px auto;
    	  width: 20px;
 	}
+}
+@media (-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi){ 
+	#controlsArea input#infos.btn{
+		background-image: url("../images/info@2x.png");
+		
+	}
+	#controlsArea input#newgame.btn {
+   	 	background-image: url("../images/new@2x.png");
+	}
+	.credits-def div.cred{
+		background-image: url("../images/coins2@2x.png");
+	}
+	.credits-def div.defbet {
+   		background-image: url("../images/default-bet@2x.png");
+
+	}
+	#increase {
+    	background-image: url("../images/bet-up@2x.png");
+	}
+	#decrease {
+    	background-image: url("../images/bet-down@2x.png");
+	}
+	.player-det .bett {
+    	background-image: url("../images/coins@2x.png");
+   }
+}
+@media (-webkit-min-device-pixel-ratio: 1) and (max-device-width : 1280px) {
+	#controlsArea input#newgame.btn{
+		background-image: url("../images/new@2x.png");
+		background-size: 45px auto;
+	}
+	#controlsArea input#infos.btn{
+		background-image: url("../images/info@2x.png");
+		background-size: 45px auto;
+	}
+	#increase {
+    	background-image: url("../images/bet-up@2x.png");
+	}
+	#decrease {
+    	background-image: url("../images/bet-down@2x.png");
+	}
+}
+@media (-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) and (max-device-width : 1024px) { 
+	.credits-def div.cred{
+		background-image: url("../images/coins2@2x.png");
+		background-size: 26px auto;
+	}
+	.credits-def div.defbet {
+   		background-image: url("../images/default-bet@2x.png");
+   		background-size: 25px auto;
+	}
+	#controlsArea input#newgame.btn{
+		background-image: url("../images/new@2x.png");
+		background-size: 30px auto;
+	}
+	#controlsArea input#infos.btn{
+		background-image: url("../images/info@2x.png");
+		background-size: 30px auto;
+	}
+	.player-det .bett{
+		background-size: 26px auto;
+	}
+	#increase, #decrease{
+		background-size: 33px auto;
+	}
+}
+@media (-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) and (max-device-width : 640px) { 
+	#decrease{
+		background-image: url("../images/bet-down@2x.png");
+		background-size: 20px auto;
+	}
+	#increase{
+		background-image: url("../images/bet-up@2x.png");
+		background-size: 20px auto;
+	}
+	.credits-def div.cred {
+		background-image: url("../images/coins2@2x.png");
+		background-size: 20px auto;
+	}
+	.credits-def div.defbet {
+		background-image: url("../images/default-bet@2x.png");
+		background-size: 20px auto;
+	}
+	
 }
