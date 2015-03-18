@@ -53,9 +53,40 @@ function alertDismissed() {
         'D\'accord'                  // buttonName
     ); } else {console.log(message)}
 }
-function onConfirm(buttonIndex) {
+function onConfirmNew(buttonIndex) {
         //alert('You selected button ' + buttonIndex);
-        return buttonIndex;
+        if(buttonIndex === 1){
+            window.localStorage.removeItem('scor');
+            location.reload();
+        }    
+      //alert(buttonIndex);
+      //console.log(buttonIndex);
+    }
+function onConfirmIns(buttonIndex) {
+        if(buttonIndex === 1){
+                // Take half of player's current bet from credits.
+                        alert('da');
+                amount = player[0].bet / 2;
+                credits -= amount;
+            
+                // If the dealer has blackjack, show the down card and pay player at 2 to 1.
+            
+                if (dealer.getScore() == 21)
+                {
+                  dealer.cardsNode.firstChild.firstChild.style.visibility = "";
+                  credits += player[0].bet;
+                  shoAlert("Dealer has Blackjack, you win " + formatDollar(player[0].bet));
+                }
+                else
+                  showAlert("Dealer does not have Blackjack, you lose " + formatDollar(amount));
+            
+                // Update credits.
+            
+                updateBetDisplay(0);
+              } else {
+                        alert('nu');
+              }
+        //return buttonIndex;
       //alert(buttonIndex);
       //console.log(buttonIndex);
     }
@@ -66,7 +97,7 @@ function onConfirm(buttonIndex) {
       if(isMobile.any()){
         navigator.notification.confirm(
             '', // message
-             onConfirm,            // callback to invoke with index of button pressed
+             onConfirmIns,            // callback to invoke with index of button pressed
             'Do you want to buy insurance?',           // title
             ['Oui','Non']         // buttonLabels
         ); } else {
@@ -733,30 +764,8 @@ function offerInsurance() {
 
   // Offer insurance bet to player. This is a side bet so it's resolved here.
 
-  if (showConfirmIns() === 1) {
-
-    // Take half of player's current bet from credits.
-            alert('da');
-    amount = player[0].bet / 2;
-    credits -= amount;
-
-    // If the dealer has blackjack, show the down card and pay player at 2 to 1.
-
-    if (dealer.getScore() == 21)
-    {
-      dealer.cardsNode.firstChild.firstChild.style.visibility = "";
-      credits += player[0].bet;
-      shoAlert("Dealer has Blackjack, you win " + formatDollar(player[0].bet));
-    }
-    else
-      showAlert("Dealer does not have Blackjack, you lose " + formatDollar(amount));
-
-    // Update credits.
-
-    updateBetDisplay(0);
-  } else {
-            alert('nu');
-  }
+  showConfirmIns();
+  
 }
 
 function playerSplit() {

@@ -320,10 +320,7 @@
         //alert('infos');        
     });
     $(document).on('click','#newgame',function(){
-        if (showConfirmNew() === 1) {
-            window.localStorage.removeItem('scor');
-            location.reload();
-        }
+        showConfirmNew();
     });
     
 </script>
