@@ -795,7 +795,63 @@ form{
 		top: 0.75em;
 	}
 }
+@media only screen and  (min-device-width : 320px) and (max-device-width : 568px) {
+	.content-top{
+		background: #000;
+	}
+	.player-det, .dealer-det {
+		height: 80%;
+	}
+	.card {
+    	font-size: 1.2em;
+	}
+	.front div.index{
+		font-size: 0.2em;
+		left: 0.25em;
+	}
+	.front div{
+		background-color: #fff;
+		font-size: 1em;
+	}
+	.front div.ace {
+		font-size: 200%;
+		left: 0.6em;
+		top: 0.8em;
+	}
+	
+	.face ~ div.spotA1 {
+		font-size: 0.9em;
+		left: 0.8em;
+		top: 0.6em;
+	}
+	.face ~ div.spotC5 {
+		font-size: 0.9em;
+		left: auto;
+		right: 0.5em;
+		top: 4.4em;
+	}
+	.spotA1 { position: absolute; left: 0.60em; top: 0.5em; }
+	.spotA2 { position: absolute; left: 0.60em; top: 1.5em; }
+	.spotA3 { position: absolute; left: 0.60em; top: 2.0em; }
+	.spotA4 { position: absolute; left: 0.60em; top: 2.5em; }
+	.spotA5 { position: absolute; left: 0.60em; top: 3.5em; }
+	
+	.spotB1 { position: absolute; left: 1.55em; top: 0.5em; }
+	.spotB2 { position: absolute; left: 1.55em; top: 1.0em; }
+	.spotB3 { position: absolute; left: 1.55em; top: 2.0em; }
+	.spotB4 { position: absolute; left: 1.55em; top: 3.0em; }
+	.spotB5 { position: absolute; left: 1.55em; top: 3.5em; }
+	
+	.spotC1 { position: absolute; left: 2.50em; top: 0.5em; }
+	.spotC2 { position: absolute; left: 2.50em; top: 1.5em; }
+	.spotC3 { position: absolute; left: 2.50em; top: 2.0em; }
+	.spotC4 { position: absolute; left: 2.50em; top: 2.5em; }
+	.spotC5 { position: absolute; left: 2.50em; top: 3.5em; }
 
+	.btn-wrappers{
+		margin: 0.3em 0 0.6em 0.2em;
+	}
+}
 @media only screen and (max-device-width : 480px){ 
 	.content{
 		font-size: 0.85em;
@@ -878,62 +934,7 @@ form{
 	.spotC4 { top: 3.5em; }
 	.spotC5 { top: 4.5em; }
 }
-@media only screen 
-and (min-device-width : 481px) 
-and (max-device-width : 568px) {
-	.player-det, .dealer-det {
-		height: 80%;
-	}
-	.card {
-    	font-size: 1.2em;
-	}
-	.front div.index{
-		font-size: 0.2em;
-		left: 0.25em;
-	}
-	.front div{
-		background-color: #fff;
-		font-size: 1em;
-	}
-	.front div.ace {
-		font-size: 200%;
-		left: 0.6em;
-		top: 0.8em;
-	}
-	
-	.face ~ div.spotA1 {
-		font-size: 0.9em;
-		left: 0.8em;
-		top: 0.6em;
-	}
-	.face ~ div.spotC5 {
-		font-size: 0.9em;
-		left: auto;
-		right: 0.5em;
-		top: 4.4em;
-	}
-	.spotA1 { position: absolute; left: 0.60em; top: 0.5em; }
-	.spotA2 { position: absolute; left: 0.60em; top: 1.5em; }
-	.spotA3 { position: absolute; left: 0.60em; top: 2.0em; }
-	.spotA4 { position: absolute; left: 0.60em; top: 2.5em; }
-	.spotA5 { position: absolute; left: 0.60em; top: 3.5em; }
-	
-	.spotB1 { position: absolute; left: 1.55em; top: 0.5em; }
-	.spotB2 { position: absolute; left: 1.55em; top: 1.0em; }
-	.spotB3 { position: absolute; left: 1.55em; top: 2.0em; }
-	.spotB4 { position: absolute; left: 1.55em; top: 3.0em; }
-	.spotB5 { position: absolute; left: 1.55em; top: 3.5em; }
-	
-	.spotC1 { position: absolute; left: 2.50em; top: 0.5em; }
-	.spotC2 { position: absolute; left: 2.50em; top: 1.5em; }
-	.spotC3 { position: absolute; left: 2.50em; top: 2.0em; }
-	.spotC4 { position: absolute; left: 2.50em; top: 2.5em; }
-	.spotC5 { position: absolute; left: 2.50em; top: 3.5em; }
 
-	.btn-wrappers{
-		margin: 0.3em 0 0.6em 0.2em;
-	}
-}
 @media only screen and (max-device-width : 400px){ 
 	.content{
 		font-size: 0.8em;
