@@ -65,7 +65,7 @@ function onConfirmNew(buttonIndex) {
 function onConfirmIns(buttonIndex) {
         if(buttonIndex === 1){
                 // Take half of player's current bet from credits.
-                        alert('da');
+                        //alert('da');
                 amount = player[0].bet / 2;
                 credits -= amount;
             
@@ -84,7 +84,7 @@ function onConfirmIns(buttonIndex) {
             
                 updateBetDisplay(0);
               } else {
-                        alert('nu');
+                        //alert('nu');
               }
         //return buttonIndex;
       //alert(buttonIndex);
