@@ -626,14 +626,14 @@ function startRound() {
   var i;
    if ((credits < defaultBet) && (credits > minBet)) {
       showAlert("Default bet will be reseted to minimum bet, because you have less credits than actual bet");
-      setTimeout(function(){changeBet(0);},100);
+      setTimeout(function(){changeBet(0);},10);
    }
    if (credits < minBet) {
       
       showConfirmNew();
    } else {
       // Reset all hands.
-    
+   setTimeout(function(){ 
       dealer.reset();
       for (i = 0; i < player.length; i++) {
         player[i].reset();
@@ -682,6 +682,7 @@ function startRound() {
       //$('.bett').css("background-image","url('images/coins.png'").css("background-position","0 50%;").css("background-size","30%").css("background-repeat","no-repeat");
       $('.bett').show();
       $('#player0points span').css("display","block");
+   },200);
    } //end credits > minBet
 } //end startRound
 
