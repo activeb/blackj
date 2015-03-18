@@ -953,10 +953,10 @@ function playDealer() {
   var d;
 
   // Get and show the dealer's score.
-
+$('#dealerpoints span').css("display","block");
   d = dealer.getScore();
   dealer.scoreTextNode.nodeValue = d;
-  $('#dealerpoints span').css("display","block");
+  //$('#dealerpoints span').css("display","block");
 
   // If the dealer's total is less than 17, set up to deal another card.
 
