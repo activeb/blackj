@@ -795,7 +795,7 @@ form{
 		top: 0.75em;
 	}
 }
-@media only screen and  (max-device-width: 570px){
+@media only screen and (min-device-width: 481px) and (max-device-width: 570px){
 	.player-det, .dealer-det {
 		height: 80%;
 	}
