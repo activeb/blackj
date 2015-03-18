@@ -54,15 +54,15 @@ function alertDismissed() {
     ); } else {console.log(message)}
 }
 function onConfirm(buttonIndex) {
-        alert('You selected button ' + buttonIndex);
-        //return buttonIndex;
-      alert(buttonIndex);
-      console.log(buttonIndex);
+        //alert('You selected button ' + buttonIndex);
+        return buttonIndex;
+      //alert(buttonIndex);
+      //console.log(buttonIndex);
     }
 
     // Show a custom confirmation dialog
     //
-    function showConfirm() {
+    function showConfirmIns() {
       if(isMobile.any()){
         navigator.notification.confirm(
             '', // message
@@ -71,6 +71,19 @@ function onConfirm(buttonIndex) {
             ['Oui','Non']         // buttonLabels
         ); } else {
          var aa = confirm('Do you want to buy insurance?');
+         console.log(aa);
+        }
+        
+    }
+    function showConfirmNew() {
+      if(isMobile.any()){
+        navigator.notification.confirm(
+            '', // message
+             onConfirm,            // callback to invoke with index of button pressed
+            'Do you realy want to start a new game?',           // title
+            ['Oui','Non']         // buttonLabels
+        ); } else {
+         var aa = confirm('Do you realy want to start a new game?');
          console.log(aa);
         }
         
@@ -720,7 +733,7 @@ function offerInsurance() {
 
   // Offer insurance bet to player. This is a side bet so it's resolved here.
 
-  if (showConfirm() == 0) {
+  if (showConfirmIns() == 1) {
 
     // Take half of player's current bet from credits.
 
