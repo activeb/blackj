@@ -799,6 +799,13 @@ form{
 	.player-det, .dealer-det {
 		height: 80%;
 	}
+	.card {
+    	font-size: 1.3em;
+	}
+	.front div.index{
+		font-size: 0.2em;
+		left: 0.25em;
+	}
 }
 @media only screen and (max-device-width : 480px){ 
 	.content{
