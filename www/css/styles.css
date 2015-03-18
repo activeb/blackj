@@ -927,6 +927,10 @@ form{
 	.spotC3 { position: absolute; left: 2.50em; top: 2.0em; }
 	.spotC4 { position: absolute; left: 2.50em; top: 2.5em; }
 	.spotC5 { position: absolute; left: 2.50em; top: 3.5em; }
+
+	.btn-wrappers{
+		margin: 0.3em 0 0.6em 0.2em;
+	}
 }
 @media only screen and (max-device-width : 400px){ 
 	.content{
