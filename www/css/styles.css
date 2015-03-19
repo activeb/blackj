@@ -902,6 +902,18 @@ form{
 		padding: 0.5em 0.9em;
 	}
 }
+/* Old phones */
+@media (-webkit-max-device-pixel-ratio: 2),
+(max-resolution: 192dpi) and (max-width : 640px){
+	.Android .content{
+		font-size: 0.8em;
+	}
+}
+@media only screen and  (max-width : 533px){
+	.Android .content{
+		font-size: 0.8em;
+	}
+}
 @media only screen and  (max-width : 533px){
 	.Android .content{
 		font-size: 0.8em;
