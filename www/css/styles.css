@@ -834,8 +834,8 @@ form{
 	}
 }
 @media only screen and  (max-device-width : 568px){
-	.iOS .player-det, .dealer-det {
-		height: 80%;
+	.iOS .player-det, .iOS .dealer-det {
+		height: 79%;
 	}
 	.iOS .card {
     	font-size: 1.45em;
