@@ -44,12 +44,12 @@ function Card(rank, suit) {
 function alertDismissed() {
     // do something
 }
- function showAlert(message) {
+ function showAlert(message,title) {
    if(isMobile.any()){
     navigator.notification.alert(
-        '',  // message
+        message,  // message
          alertDismissed,         // callback
-        message ,            // title
+        title ,            // title
         'OK'                  // buttonName
     ); } else {console.log(message)}
 }
@@ -75,10 +75,10 @@ function onConfirmIns(buttonIndex) {
                 {
                   dealer.cardsNode.firstChild.firstChild.style.visibility = "";
                   credits += player[0].bet;
-                  shoAlert("Dealer has Blackjack, you win " + formatDollar(player[0].bet));
+                  showAlert("Dealer has Blackjack, you win " + formatDollar(player[0].bet),"Well done");
                 }
                 else
-                  showAlert("Dealer does not have Blackjack, you lose " + formatDollar(amount));
+                  showAlert("Dealer does not have Blackjack, you lose " + formatDollar(amount),"Sorry");
             
                 // Update credits.
             
@@ -614,7 +614,7 @@ function getNextCard() {
   // If there are no cards left, start a new deck.
 
   if (deck.cardCount() == 0) {
-    showAlert("New Deck");
+    showAlert("New Deck","Deck change");
     newDeck();
   }
 
@@ -625,7 +625,7 @@ function startRound() {
 
   var i;
    if ((credits < defaultBet) && (credits > minBet)) {
-      showAlert("Default bet will be reseted to minimum bet, because you have less credits than actual bet");
+      showAlert("Default bet will be reseted to minimum bet !"," You have less credits than actual bet");
       setTimeout(function(){changeBet(0);},10);
    }
    if (credits < minBet) {
@@ -664,7 +664,7 @@ function startRound() {
       // If the burn card was reached, start a new deck.
     
       if (deck.cardCount() < burnCard) {
-        showAlert("New Deck");
+        showAlert("New Deck", "Deck Change");
         newDeck();
       }
     
@@ -1056,7 +1056,7 @@ function endRound() {
     }
     else if ((player[i].blackjack && !dealer.blackjack) ||
              (p <= 21 && d > 21) || (p <= 21 && p > d)) {
-      setTimeout(function(){showAlert('Player Wins');},200);
+      setTimeout(function(){showAlert('Player Wins', "Well done");},200);
       player[i].resultTextNode.nodeValue = "Player Wins";
       tmp = 2 * player[i].bet;
 
@@ -1071,16 +1071,16 @@ function endRound() {
     else if ((dealer.blackjack && !player[i].blackjack) ||
              p > 21 || p < d) {
         if (p > 21) {
-          setTimeout(function(){showAlert("Busted (" + p + ")")},100);
+          setTimeout(function(){showAlert("Busted (" + p + ")", "Sorry")},100);
         } else {
-          setTimeout(function(){showAlert('Player Loses');},200);
+          setTimeout(function(){showAlert('Player Loses', "Bad luck");},200);
         }
       
       player[i].resultTextNode.nodeValue = "Player Loses";
       addClassName(player[i].betTextNode.parentNode, "lost");
     }
     else {
-      setTimeout(function(){showAlert('Push');},200);
+      setTimeout(function(){showAlert('Push',"Tight game");},200);
       player[i].resultTextNode.nodeValue = "Push";
       credits += player[i].bet;
     }
