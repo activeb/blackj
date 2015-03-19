@@ -751,6 +751,7 @@ function playRound() {
     dealer.blackjack = true;
     $('#dealerScore').css('font-size','1.5em');
     dealer.scoreTextNode.nodeValue = "Blackjack";
+    $('#dealerpoints span').css("display","none");
   } else {
    $('#dealerScore').css('font-size','2.5em');
    //$('#dealerpoints span').css('display','block');
