@@ -871,7 +871,7 @@ form{
 	.iOS .spotC3 { position: absolute; left: 2.50em; top: 2.0em; }
 	.iOS .spotC4 { position: absolute; left: 2.50em; top: 2.5em; }
 	.iOS .spotC5 { position: absolute; left: 2.50em; top: 3.5em; }
-
+	
 	.iOS .btn-wrappers{
 		margin: 0.3em 0 0.6em 0.2em;
 	}
@@ -882,8 +882,8 @@ form{
 	.iOS #controlsArea{
 		font-size: 1.15em;
 	}
-	.iOS #controlsArea input#infos.btn, 
-	.iOS #controlsArea input#newgame.btn{
+	 #controlsArea input#infos.btn, 
+	#controlsArea input#newgame.btn{
 		background-position: 50% 75%;
 	}
 }
