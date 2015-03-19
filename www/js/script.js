@@ -724,6 +724,8 @@ function dealRound()
     player[0].blackjack = true;
     $('#player0Score').css('font-size','1.5em');
     player[0].scoreTextNode.nodeValue = "Blackjack";
+    $('#player0points span').css("display","none");
+    $('#dealerpoints span').css("display","block");
   }
   else{
    $('#player0Score').css('font-size','2.5em');
