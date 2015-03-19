@@ -794,6 +794,7 @@ function offerInsurance() {
   // Offer insurance bet to player. This is a side bet so it's resolved here.
 
   showConfirmIns();
+  return false;
   
 }
 
