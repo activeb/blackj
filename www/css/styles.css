@@ -902,8 +902,8 @@ form{
 		padding: 0.5em 0.9em;
 	}
 }
-@media only screen and  (max-device-width : 534px){
-	.content{
+@media only screen and  (max-width : 533px){
+	.Android .content{
 		font-size: 0.8em;
 	}
 }
