@@ -882,8 +882,8 @@ form{
 	.iOS #controlsArea{
 		font-size: 1.15em;
 	}
-	#controlsArea input#infos.btn, 
-	#controlsArea input#newgame.btn{
+	.iOS #controlsArea input#infos.btn, 
+	.iOS #controlsArea input#newgame.btn{
 		background-position: 50% 75%;
 	}
 }
