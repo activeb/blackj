@@ -194,7 +194,6 @@ body {
   height: 4.65em;
 }
 .front div{
-	color: #000;
 	font-family: 'Times New Roman', serif;
 
 }
@@ -595,8 +594,6 @@ form{
 		padding: 0em 1em;
 	}
 	.front div{
-		color: #000;
-		-webkit-text-fill-color: #000;
 		font-family: 'Times New Roman', serif;
 		font-size: 0.95em;
 		line-height: 1.2;
@@ -830,7 +827,7 @@ form{
 		height: 80%;
 	}
 	.iOS .card {
-    	font-size: 1.2em;
+    	font-size: 1.45em;
 	}
 	.iOS .front div.index{
 		font-size: 0.2em;
