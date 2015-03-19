@@ -50,7 +50,7 @@ function alertDismissed() {
         '',  // message
          alertDismissed,         // callback
         message ,            // title
-        'D\'accord'                  // buttonName
+        'OK'                  // buttonName
     ); } else {console.log(message)}
 }
 function onConfirmNew(buttonIndex) {
@@ -396,7 +396,7 @@ if (window.localStorage.getItem('scor') !== null) {
    console.log(a);
    initCredit = parseInt(a);
 } else {
-   initCredit = 100;//aici
+   initCredit = 500;//aici
 }
 var initBet       =   10;
 
