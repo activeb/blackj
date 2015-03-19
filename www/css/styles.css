@@ -879,6 +879,13 @@ form{
 		height: 90%;
 		width: 400px;
 	}
+	.iOS #controlsArea{
+		font-size: 1.15em;
+	}
+	#controlsArea input#infos.btn, 
+	#controlsArea input#newgame.btn{
+		background-position: 50% 75%;
+	}
 }
 @media only screen and (max-device-width : 480px){ 
 	.content{
