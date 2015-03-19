@@ -924,11 +924,11 @@ form{
 		font-size: 0.9em;
 	}
 	.player-det, .dealer-det{
-		height: 78%;
+		height: 80%;
 		font-size: 1.1em
 	}
 	.card {
-    	font-size: 1em;
+    	font-size: 1.1em;
 	}
 	#controlsArea input.button{
 		float: left;
