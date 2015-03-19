@@ -884,6 +884,7 @@ form{
 	.iOS .spotC5 { position: absolute; left: 2.50em; top: 3.5em; }
 	
 	.iOS .btn-wrappers{
+		font-size: 1em;
 		margin: 0.3em 0 0.6em 0.2em;
 	}
 	#rulesBox1{
@@ -896,6 +897,9 @@ form{
 	 #controlsArea input#infos.btn, 
 	#controlsArea input#newgame.btn{
 		background-position: 50% 75%;
+	}
+	.iOS #controlsArea input.button{
+		padding: 0.5em 0.9em;
 	}
 }
 @media only screen and (max-device-width : 480px){ 
