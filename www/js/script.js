@@ -742,7 +742,7 @@ function playRound() {
 
   // If dealer's up card is an ace, offer insurance.
 
-  if (dealer.cards[1].rank == "A")
+  if ((dealer.cards[1].rank == "A") && (player[0].blackjack === false))
     offerInsurance();
 
   // Check for dealer blackjack.
