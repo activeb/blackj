@@ -30,7 +30,7 @@ function infos(){
     }
 
 
-var betu,buttonIndex ;
+var betu ;
 var hack = 0;
 function Card(rank, suit) {
 
