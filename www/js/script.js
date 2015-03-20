@@ -30,7 +30,7 @@ function infos(){
     }
 
 
-var betu ;
+var started ;
 var hack = 0;
 function Card(rank, suit) {
 
@@ -43,6 +43,7 @@ function Card(rank, suit) {
 
 function alertDismissed() {
     // do something
+    
 }
  function showAlert(message,title) {
    if(isMobile.any()){
@@ -426,7 +427,7 @@ if (window.localStorage.getItem('scor') !== null) {
    console.log(a);
    initCredit = parseInt(a);
 } else {
-   initCredit = 500;//aici
+   initCredit = 1000;//aici
 }
 var initBet       =   10;
 
