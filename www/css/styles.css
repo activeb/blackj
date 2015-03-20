@@ -619,7 +619,7 @@ form{
     	padding: 0 0 3px 35px;
 	}
 	.btn-wrappers{
-		margin: 0.6em 0 0.6em;
+		margin: 0.8em 0 0.8em;
 	}
 	.credits-def{
 		margin-top: 0.5em; 	
@@ -865,6 +865,33 @@ form{
 		font-size: 1.1em;
 	}
 }
+@media only screen and (-webkit-max-device-pixel-ratio: 1.5)  and (max-device-width : 640px){
+	.player-det, .dealer-det {
+		height: 73%;
+		font-size: 0.8em;
+	}
+	.player-det, .dealer-det {
+		height: 73%;
+		font-size: 0.8em;
+	}
+	#controlsArea input#infos.btn, #controlsArea input#newgame.btn {
+		margin-top: -0.7em;
+	}
+	.front div {
+		font-size: 0.9em;
+	}
+	.front div.index {
+		font-size: 0.45em;
+	}
+	.front div.ace {
+		font-size: 170%;
+		left: 0.57em;
+		top: 1.1em;
+	}
+	.btn-wrappers {
+		font-size: 0.9em;
+	}
+}
 @media only screen and  (max-device-width : 568px){
 	.iOS .player-det, .iOS .dealer-det {
 		height: 79%;
@@ -946,6 +973,30 @@ form{
 @media only screen and (max-width : 533px){
 	 .content{
 		font-size: 0.8em;
+	}
+	.player-det, .dealer-det{
+		height: 76%;
+	}
+	#controlsArea input#infos.btn, #controlsArea input#newgame.btn {
+		margin-top: -0.7em;
+	}
+	.btn-wrappers {
+		font-size: 1.2em;
+	}
+	.credits-def div.cred, .credits-def div.defbet{
+		background-size: 15px auto;
+	}
+	#controlsArea input#infos.btn, #controlsArea input#newgame.btn{
+		margin-top: -0.25em;
+	}
+	#increase, #decrease{
+		height:30px;
+	}
+	#player0Score, #dealerScore{
+		line-height: 1;
+	}
+	#inc-dec{
+		bottom: 5px;
 	}
 }
 
