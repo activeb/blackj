@@ -28,6 +28,7 @@ ul {
     font-family: 'Lato-Regular';
     src: url('../fonts/Lato-Regular.ttf');
 }
+
 html{
 	height: 100%;
 	width: 100%;
@@ -508,6 +509,11 @@ form{
 	float: left;
 	margin: 0.5em 0 0 0;
 }
+#controlsArea input.button:focus, #controlsArea input.button:active, #controlsArea input.button{
+	outline: none;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
+	-webkit-tap-highlight-color: transparent; 
+}
 #rulesBox1{
 	background-color: rgba(24,51,73,0.8);
 	color: #fff;
@@ -905,20 +911,19 @@ form{
 /* Old phones */
 @media (-webkit-max-device-pixel-ratio: 2),
 (max-resolution: 192dpi) and (max-width : 640px){
+	.content-top{
+		background-color: #000;
+	}
 	.Android .content{
 		font-size: 0.8em;
 	}
 }
-@media only screen and  (max-width : 533px){
+@media only screen and (max-width : 533px){
 	.Android .content{
 		font-size: 0.8em;
 	}
 }
-@media only screen and  (max-width : 533px){
-	.Android .content{
-		font-size: 0.8em;
-	}
-}
+
 @media only screen and (max-device-width : 480px){ 
 	.content{
 		font-size: 0.85em;
