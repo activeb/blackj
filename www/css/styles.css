@@ -593,7 +593,7 @@ form{
 		width: 600px;
 	}
 }
-@media only screen and  (max-device-width : 1280px)  {
+@media only screen and (-webkit-max-device-pixel-ratio: 1.5) and  (max-device-width : 1280px)  {
 	#controlsArea input.button{
 		float: left;
 	}
@@ -645,6 +645,9 @@ form{
 	#rulesBox1{
 		height: 94%;
 		width: 600px;
+	}
+	.player-det, .dealer-det{
+		height: 83%;
 	}
 }
 @media only screen and  (max-device-width : 1024px)  {
@@ -701,7 +704,15 @@ form{
 		width: 600px;
 	}
 }
-
+@media only screen and  (max-device-width : 962px){
+	.player-det, .dealer-det{
+		height: 80%;
+	}
+	.card{
+		font-size: 1.1em;
+	}
+	
+}
 
 @media only screen and  (max-device-width : 736px){
 	.content{
@@ -817,17 +828,20 @@ form{
 		font-size: 1em;
 	}
 	.front div{
-		font-size: 1.05em;
+		font-size: 0.95em;
+	}
+	.front div.index{
+		font-size: 0.65em;
 	}
 	.face ~ div.spotA1 {
-		font-size: 0.9em;
-		left: 0.7em;
-		top: 0.5em;
+		font-size: 0.7em;
+		left: 1.1em;
+		top: 0.7em;
 	}
 	.face ~ div.spotC5 {
-		font-size: 0.9em;
-		right: 0.5em;
-		top: 4.2em;
+		font-size: 0.7em;
+		right: 0.6em;
+		top: 5.8em;
 	}
 	.front div.ace {
 		font-size: 200%;
@@ -837,6 +851,9 @@ form{
 	#rulesBox1{
 		height: 90%;
 		width: 480px;
+	}
+	.card{
+		font-size: 1.1em;
 	}
 }
 @media only screen and  (max-device-width : 568px){
@@ -909,11 +926,7 @@ form{
 	}
 }
 /* Old phones */
-@media (-webkit-max-device-pixel-ratio: 2),
-(max-resolution: 192dpi) and (max-width : 640px){
-	.content-top{
-		background: #000;
-	}
+@media (-webkit-min-device-pixel-ratio: 2) and (-webkit-max-device-pixel-ratio: 2.5) and (max-width : 640px){
 	 .content{
 		font-size: 0.8em;
 	}
