@@ -808,7 +808,7 @@ form{
 @media only screen and (max-device-width : 640px){
 	
 	.player-det, .dealer-det {
-		height: 74%;
+		height: 73%;
 		font-size: 0.8em;
 	}
 	.btn-wrappers {
@@ -866,10 +866,6 @@ form{
 	}
 }
 @media only screen and (-webkit-max-device-pixel-ratio: 1.5)  and (max-device-width : 640px){
-	.player-det, .dealer-det {
-		height: 73%;
-		font-size: 0.8em;
-	}
 	.player-det, .dealer-det {
 		height: 73%;
 		font-size: 0.8em;
@@ -975,7 +971,7 @@ form{
 		font-size: 0.8em;
 	}
 	.player-det, .dealer-det{
-		height: 76%;
+		height: 74%;
 	}
 	#controlsArea input#infos.btn, #controlsArea input#newgame.btn {
 		margin-top: -0.7em;
@@ -992,11 +988,17 @@ form{
 	#increase, #decrease{
 		height:30px;
 	}
+	#player0Score{
+		margin-top: 0.1em;
+	}
 	#player0Score, #dealerScore{
 		line-height: 1;
 	}
 	#inc-dec{
 		bottom: 5px;
+	}
+	.credits-def div.cred{
+		margin-bottom: 0.1em;
 	}
 }
 
