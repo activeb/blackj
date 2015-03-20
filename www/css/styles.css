@@ -808,7 +808,7 @@ form{
 @media only screen and (max-device-width : 640px){
 	
 	.player-det, .dealer-det {
-		height: 77%;
+		height: 74%;
 		font-size: 0.8em;
 	}
 	.btn-wrappers {
@@ -970,7 +970,7 @@ form{
 		font-size: 0.8em;
 	}
 }
-@media  only screen and (-webkit-min-device-pixel-ratio: 2) and (-webkit-max-device-pixel-ratio: 2.5) and (max-width : 533px){
+@media  only screen and (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.5) and (max-width : 533px){
 	 .content{
 		font-size: 0.8em;
 	}
