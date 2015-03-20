@@ -36,17 +36,17 @@
 
 
 
-<gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="images/android/320x200.png" />
-<gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="images/android/480x320.png" />
-<gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="images/android/800x480.png" />
-<gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="images/android/1280x720.png" />
+<gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="images/android/320x200.png" orientation="landscape" />
+<gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="images/android/480x320.png" orientation="landscape" />
+<gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="images/android/800x480.png" orientation="landscape" />
+<gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="images/android/1280x720.png" orientation="landscape" />
 
 
-<gap:splash gap:platform="ios" height="480" src="images/ios/480x320.png" width="320" />
-<gap:splash gap:platform="ios" height="960" src="images/ios/960x640.png" width="640" />
-<gap:splash gap:platform="ios" height="1136" src="images/ios/1136x640.png" width="640" />
-<gap:splash gap:platform="ios" height="1024" src="images/ios/2048x1536.png" width="768" />
-<gap:splash gap:platform="ios" height="768" src="images/ios/2208x1242.png" width="1024" />
+<gap:splash gap:platform="ios" height="480" src="images/ios/480x320.png" width="320" orientation="landscape" />
+<gap:splash gap:platform="ios" height="960" src="images/ios/960x640.png" width="640" orientation="landscape" />
+<gap:splash gap:platform="ios" height="1136" src="images/ios/1136x640.png" width="640" orientation="landscape" />
+<gap:splash gap:platform="ios" height="1024" src="images/ios/2048x1536.png" width="768" orientation="landscape" />
+<gap:splash gap:platform="ios" height="768" src="images/ios/2208x1242.png" width="1024" orientation="landscape" />
 
 <access origin="*" />
 
