@@ -21,7 +21,7 @@
   <gap:plugin name="com.admob.google" source="plugins.cordova.io" />
   <gap:plugin name="org.apache.cordova.dialogs" version="0.2.10" />
   <gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="1.2.0" />
-
+  <gap:plugin name="org.apache.cordova.device" source="plugins.cordova.io" />
 <icon src="images/ios/icon57.png" />
 <icon gap:platform="android" gap:qualifier="ldpi" src="images/android/icon-36x36.png" />
 <icon gap:platform="android" gap:qualifier="mdpi" src="images/android/48x48.png" />
