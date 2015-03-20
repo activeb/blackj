@@ -196,6 +196,8 @@ body {
 }
 .front div{
 	font-family: 'Times New Roman', serif;
+	-webkit-appearance: text-field;
+	-moz-appearance: text-field;
 
 }
 .spotA1 { position: absolute; left: 0.60em; top: 0.5em; }
@@ -647,7 +649,7 @@ form{
 		width: 600px;
 	}
 	.player-det, .dealer-det{
-		height: 83%;
+		height: 80%;
 	}
 }
 @media only screen and  (max-device-width : 1024px)  {
@@ -867,8 +869,8 @@ form{
 }
 @media only screen and (-webkit-max-device-pixel-ratio: 1.5)  and (max-device-width : 640px){
 	.player-det, .dealer-det {
-		height: 73%;
-		font-size: 0.8em;
+		height: 69%;
+		font-size: 0.7em;
 	}
 	#controlsArea input#infos.btn, #controlsArea input#newgame.btn {
 		margin-top: -0.7em;
@@ -886,6 +888,16 @@ form{
 	}
 	.btn-wrappers {
 		font-size: 0.9em;
+	}
+	#inc-dec {
+		bottom: 5px;
+	}
+	#increase, #decrease {
+		background-size: 15px auto;
+		height: 23px;
+	}
+	.face ~ div.spotA1 {
+		left: 0.9em;
 	}
 }
 @media only screen and  (max-device-width : 568px){
@@ -967,6 +979,7 @@ form{
 	}
 }
 @media  only screen and (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.5) and (max-width : 533px){
+
 	 .content{
 		font-size: 0.8em;
 	}
@@ -999,6 +1012,14 @@ form{
 	}
 	.credits-def div.cred{
 		margin-bottom: 0.1em;
+	}
+	.face ~ div.spotA1 {
+    	left: 0.9em;
+    	top: 0.2em;
+	}
+	.face ~ div.spotC5 {
+    	right: 1em;
+    	top: 3.8em;
 	}
 }
 
@@ -1182,18 +1203,18 @@ form{
 	}
 	.credits-def div.defbet {
 		background-image: url("../images/default-bet@2x.png");
-		background-size: 20px auto;
+		background-size: 15px auto;
 	}	
 }
 @media (-webkit-min-device-pixel-ratio: 1.25),
 (min-resolution: 120dpi) and (max-device-width : 480px) { 
 	#decrease{
 		background-image: url("../images/bet-down@2x.png");
-		background-size: 20px auto;
+		background-size: 15px auto;
 	}
 	#increase{
 		background-image: url("../images/bet-up@2x.png");
-		background-size: 20px auto;
+		background-size: 15px auto;
 	}
 	.credits-def div.cred {
 		background-image: url("../images/coins2@2x.png");
