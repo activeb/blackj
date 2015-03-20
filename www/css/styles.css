@@ -706,12 +706,21 @@ form{
 }
 @media only screen and  (max-device-width : 962px){
 	.player-det, .dealer-det{
-		height: 80%;
+		height: 82%;
 	}
 	.card{
 		font-size: 1.1em;
 	}
-	
+	.front .div{
+		font-size: 1.35em;
+	}
+	#controlsArea{
+		padding: 0.4em 0 0.5em;
+	}
+	#increase, #decrease{
+		background-size: 45px auto;
+		height: 45px; 
+	}
 }
 
 @media only screen and  (max-device-width : 736px){
