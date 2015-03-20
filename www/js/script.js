@@ -63,6 +63,7 @@ function onConfirmNew(buttonIndex) {
       //console.log(buttonIndex);
     }
 function onConfirmIns(buttonIndex) {
+            var amount;
         if(buttonIndex === 1){
                 // Take half of player's current bet from credits.
                         //alert('da');
@@ -772,8 +773,8 @@ function playRound() {
   // If dealer's up card is an ace, offer insurance.
 
   if ((dealer.cards[1].rank == "A") && (player[0].blackjack === false))
-    offerInsurance();
-  
+    //offerInsurance();
+  showConfirmIns();
   //// Check for dealer blackjack.
   //
   //if (dealer.getScore() == 21) {
@@ -818,7 +819,7 @@ function playRound() {
 
 function offerInsurance() {
 
-  var amount;
+  //var amount;
 
   // Offer insurance bet to player. This is a side bet so it's resolved here.
 
