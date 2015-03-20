@@ -142,10 +142,10 @@ function onConfirmIns(buttonIndex) {
         navigator.notification.confirm(
             '', // message
              onConfirmNew,            // callback to invoke with index of button pressed
-            'Do you realy want to start a new game?',           // title
+            'Do you really want to start a new game?',           // title
             ['Yes','No']         // buttonLabels
         ); } else {
-         var aa = confirm('Do you realy want to start a new game?');
+         var aa = confirm('Do you really want to start a new game?');
          console.log(aa);
         }
         
