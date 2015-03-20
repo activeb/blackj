@@ -808,7 +808,7 @@ form{
 @media only screen and (max-device-width : 640px){
 	
 	.player-det, .dealer-det {
-		height: 76%;
+		height: 77%;
 		font-size: 0.8em;
 	}
 	.btn-wrappers {
