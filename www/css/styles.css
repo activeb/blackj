@@ -540,6 +540,7 @@ form{
     text-align: center;
     top: 10px;
     width: 20px;
+    z-index: 9;
 }
 #rulesBox1 .infos{
 	 height:100%;
@@ -831,6 +832,7 @@ form{
 	}
 	#increase, #decrease {
 		background-size: 20px auto;
+		height: 35px;
 	}
 	#controlsArea input.button{
 		margin-top: 0.2em;
@@ -842,25 +844,28 @@ form{
 		font-size: 1em;
 	}
 	.front div{
-		font-size: 0.95em;
+		font-size: 0.9em;
+	}
+	#inc-dec {
+		bottom: 7px;
 	}
 	.front div.index{
 		font-size: 0.65em;
 	}
 	.face ~ div.spotA1 {
 		font-size: 0.7em;
-		left: 1.1em;
+		left: 1.05em;
 		top: 0.7em;
 	}
 	.face ~ div.spotC5 {
 		font-size: 0.7em;
-		right: 0.6em;
+		right: 0.5em;
 		top: 5.8em;
 	}
 	.front div.ace {
-		font-size: 200%;
-		left: 0.57em;
-		top: 0.75em;
+		font-size: 170%;
+		left: 0.5em;
+		top: 1.2em;
 	}
 	#rulesBox1{
 		height: 90%;
@@ -912,7 +917,7 @@ form{
 		margin-top: -0.7em;
 	}
 	.front div {
-		font-size: 0.9em;
+		font-size: 0.85em;
 	}
 	.front div.index {
 		font-size: 0.45em;
@@ -934,6 +939,9 @@ form{
 	}
 	.face ~ div.spotA1 {
 		left: 0.9em;
+	}
+	#inc-dec{
+		bottom: 7px;
 	}
 }
 @media only screen and  (max-device-width : 568px) and (orientation: landscape){
