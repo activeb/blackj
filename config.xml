@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.valiprod.blackJackB" version="0.0.1" versionCode="1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-  <name>BlackJackB</name>
+<widget id="com.suwangli.BlackJack" version="0.0.1" versionCode="1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+  <name>BlackJack</name>
   <description>
-    Phonegap BlackJack
+    This is the newest version of the famous game of cards: BlackJack.
   </description>
-  <author email="contact@valiprod.com" href="https://github.com/appfeel/admob-google-cordova">AppFeel</author>
+  <author>Su Wang Li</author>
   <content src="index.html" />
   <access origin="*" />
   <preference name="LogLevel" value="VERBOSE"/>
