@@ -13,6 +13,7 @@ ul {
 
 .content {
    height: 100%;
+   overflow: hidden;
    width:100%;
 }
 
@@ -546,7 +547,7 @@ form{
 	 padding: 0 15px;
 }
 /* Media Queries */
-@media only screen and  (max-device-width : 1366px)  {
+@media only screen and  (max-device-width : 1366px) and (orientation: landscape) {
 	.content{
 		font-size: 1.7em;
 	}
@@ -597,7 +598,7 @@ form{
 		width: 600px;
 	}
 }
-@media only screen and (-webkit-max-device-pixel-ratio: 1.5) and  (max-device-width : 1280px)  {
+@media only screen and (-webkit-max-device-pixel-ratio: 1.5) and  (max-device-width : 1280px) and (orientation: landscape)  {
 	#controlsArea input.button{
 		float: left;
 	}
@@ -654,7 +655,7 @@ form{
 		height: 80%;
 	}
 }
-@media only screen and  (max-device-width : 1024px)  {
+@media only screen and  (max-device-width : 1024px) and (orientation: landscape) {
 	.content{
 		font-size: 1.3em;
 	}
@@ -708,7 +709,7 @@ form{
 		width: 600px;
 	}
 }
-@media only screen and  (max-device-width : 962px){
+@media only screen and  (max-device-width : 962px) and (orientation: landscape){
 	.player-det, .dealer-det{
 		height: 82%;
 	}
@@ -727,7 +728,7 @@ form{
 	}
 }
 
-@media only screen and  (max-device-width : 736px){
+@media only screen and  (max-device-width : 736px) and (orientation: landscape){
 	.content{
 		font-size: 1em;
 	}
@@ -798,7 +799,7 @@ form{
 	
 }
 
-@media only screen and (max-device-width : 667px){
+@media only screen and (max-device-width : 667px) and (orientation: landscape){
 	.player-det, .dealer-det{
 		height: 77%;
 	}
@@ -809,7 +810,7 @@ form{
     	margin-top: 0.1em;
 	}
 }
-@media only screen and (max-device-width : 640px){
+@media only screen and (max-device-width : 640px) and (orientation: landscape){
 	
 	.player-det, .dealer-det {
 		height: 74.5%;
@@ -870,32 +871,39 @@ form{
 	}
 }
 /* old phones */
-@media (-webkit-min-device-pixel-ratio: 2) and (-webkit-max-device-pixel-ratio: 2.5) and (max-width : 640px){
+@media (-webkit-min-device-pixel-ratio: 2) and (-webkit-max-device-pixel-ratio: 2.5) and (max-width : 640px) and (orientation: landscape){
 	 .content{
 		font-size: 0.9em;
 	}
 	.front div {
-    	font-size: 1em;
+    	font-size: 0.7em;
 	}
 	#player0Score, #dealerScore{
+		margin: 0;
 		line-height: 1;
+	}
+	.player-det .bett{
+		margin: 0;
 	}
 	#increase, #decrease {
     	background-size: 25px auto;
-    	height: 40px;
+    	height: 35px;
 	}
 	#controlsArea input.button{
 		font-size: 1.09375em;
 		margin-top: 0;
 	}
 	.player-det, .dealer-det{
-		height: 75%;
+		height: 73%;
 	}
 	.credits-def div.cred, .credits-def div.defbet{
 		padding: 0 0 4px 25px;
 	} 
+	.btn-wrappers{
+		margin: 0;
+	}
 }
-@media only screen and (-webkit-max-device-pixel-ratio: 1.5)  and (max-device-width : 640px){
+@media only screen and (-webkit-max-device-pixel-ratio: 1.5)  and (max-device-width : 640px) and (orientation: landscape){
 	.player-det, .dealer-det {
 		height: 69%;
 		font-size: 0.7em;
@@ -928,7 +936,7 @@ form{
 		left: 0.9em;
 	}
 }
-@media only screen and  (max-device-width : 568px){
+@media only screen and  (max-device-width : 568px) and (orientation: landscape){
 	.iOS .player-det, .iOS .dealer-det {
 		height: 79%;
 	}
@@ -1002,13 +1010,13 @@ form{
 }
 /* Old phones */
 
-@media  only screen and (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.5) and (max-width : 533px){
+@media  only screen and (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.5) and (max-width : 533px) and (orientation: landscape){
 
 	 .content{
-		font-size: 0.8em;
+		font-size: 0.7em;
 	}
 	.player-det, .dealer-det{
-		height: 75%;
+		height: 74%;
 	}
 	#controlsArea input#infos.btn, #controlsArea input#newgame.btn {
 		margin-top: -0.7em;
@@ -1029,7 +1037,11 @@ form{
 	#player0Score{
 		margin-top: 0.1em;
 	}
+	.player-det .bett{
+		margin: 0;
+	}
 	#player0Score, #dealerScore{
+		margin: 0;
 		line-height: 1;
 	}
 	#inc-dec{
@@ -1046,9 +1058,12 @@ form{
     	right: 0.5em;
     	top: 5em;
 	}
+	.btn-wrappers{
+		margin: 0.1em 0 0.5em;
+	}
 }
 
-@media only screen and (max-device-width : 480px){ 
+@media only screen and (max-device-width : 480px) and (orientation: landscape){ 
 	.content{
 		font-size: 0.85em;
 	}
@@ -1064,13 +1079,17 @@ form{
 	}
 	#player0points, #dealerpoints {
     	font-size: 0.75em;
+    	margin: 0;
+	}
+	.player-det .bett{
+		margin: 0;
 	}
 	.player-cont, .dealer-cont{
 		height: 92%;
 		font-size: 0.9em;
 	}
 	.player-det, .dealer-det{
-		height: 80%;
+		height: 79%;
 		font-size: 1.1em
 	}
 	.card {
@@ -1136,9 +1155,15 @@ form{
 	}
 }
 
-@media only screen and (max-device-width : 400px){ 
+@media only screen and (max-device-width : 400px) and (orientation: landscape){ 
 	.content{
 		font-size: 0.8em;
+	}
+	.player-det .bett{
+		margin: 0;
+	}
+	#player0points, #dealerpoints {
+    	margin: 0;
 	}
 	#controlsArea input#infos.btn, #controlsArea input#newgame.btn {
       background-size: 15px auto;
@@ -1146,7 +1171,7 @@ form{
 	}
 }
 @media (-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 120dpi){ 
+(min-resolution: 120dpi) and (orientation: landscape){ 
 	#controlsArea input#infos.btn{
 		background-image: url("../images/info@2x.png");
 		
@@ -1171,7 +1196,7 @@ form{
     	background-image: url("../images/coins@2x.png");
    }
 }
-@media (-webkit-min-device-pixel-ratio: 1) and (max-device-width : 1280px) {
+@media (-webkit-min-device-pixel-ratio: 1) and (max-device-width : 1280px) and (orientation: landscape) {
 	#controlsArea input#newgame.btn{
 		background-image: url("../images/new@2x.png");
 		background-size: 45px auto;
@@ -1188,7 +1213,7 @@ form{
 	}
 }
 @media (-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 120dpi) and (max-device-width : 1024px) { 
+(min-resolution: 120dpi) and (max-device-width : 1024px) and (orientation: landscape) { 
 	.credits-def div.cred{
 		background-image: url("../images/coins2@2x.png");
 		background-size: 26px auto;
@@ -1213,7 +1238,7 @@ form{
 	}
 }
 @media (-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 120dpi) and (max-device-width : 640px) { 
+(min-resolution: 120dpi) and (max-device-width : 640px)  and (orientation: landscape){ 
 	#decrease{
 		background-image: url("../images/bet-down@2x.png");
 		background-size: 20px auto;
@@ -1232,7 +1257,7 @@ form{
 	}	
 }
 @media (-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 120dpi) and (max-device-width : 480px) { 
+(min-resolution: 120dpi) and (max-device-width : 480px) and (orientation: landscape) { 
 	#decrease{
 		background-image: url("../images/bet-down@2x.png");
 		background-size: 15px auto;
