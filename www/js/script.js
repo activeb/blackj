@@ -803,7 +803,7 @@ function playRound() {
   if ((dealer.cards[1].rank == "A") && (player[0].blackjack === false))
 {    //offerInsurance();
   showConfirmIns();
-  return false;
+  //return false;
 } else {
   // Check for dealer blackjack.
   
