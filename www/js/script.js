@@ -65,7 +65,7 @@ function onConfirmNew(buttonIndex) {
     }
 function onConfirmIns(buttonIndex) {
             var amount;
-        if(buttonIndex === 1){
+        if(buttonIndex == 1){
                 // Take half of player's current bet from credits.
                         //alert('da');
                 amount = player[0].bet / 2;
@@ -86,6 +86,33 @@ function onConfirmIns(buttonIndex) {
             
                 updateBetDisplay(0);
               } else {
+                          if (dealer.getScore() == 21) {
+                        dealer.blackjack = true;
+                        $('#dealerScore').css('font-size','1.5em');
+                        dealer.scoreTextNode.nodeValue = "Blackjack";
+                        $('#dealerpoints span').css("display","none");
+                      } else {
+                       $('#dealerScore').css('font-size','2.5em');
+                       //$('#dealerpoints span').css('display','block');
+                      }
+                      
+                      // If player or dealer has blackjack, end the round.
+                      
+                      if (player[0].blackjack || dealer.blackjack) {
+                        endRound();
+                        return;
+                      }
+                      
+                      // Enable/disable buttons.
+                      setTimeout(function(){
+                          var jj = credits - defaultBet;
+                          console.log(jj);
+                       if( jj < 0) {
+                          console.log('bau');
+                           document.forms["controls"].elements["double"].disabled  = true;
+                           //$(document.forms["controls"].elements["double"]).css();
+                       }
+                      },100);
                         //alert('nu');
               }
             // Check for dealer blackjack.
@@ -774,8 +801,10 @@ function playRound() {
   // If dealer's up card is an ace, offer insurance.
 
   if ((dealer.cards[1].rank == "A") && (player[0].blackjack === false))
-    //offerInsurance();
+{    //offerInsurance();
   showConfirmIns();
+  return false;
+} else {
   // Check for dealer blackjack.
   
   if (dealer.getScore() == 21) {
@@ -805,7 +834,7 @@ function playRound() {
        //$(document.forms["controls"].elements["double"]).css();
    }
   },100);
-
+}
   if (canSplit())
     document.forms["controls"].elements["split"].disabled = false;
   document.forms["controls"].elements["double"].disabled    = false;
